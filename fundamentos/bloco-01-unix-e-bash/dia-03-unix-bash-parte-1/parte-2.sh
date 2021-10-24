@@ -61,8 +61,8 @@ The too-clever fox, finally caught" >> phrases.txt
 
 clear
 #Exercicio 7
-echo "7) Busque pelas frases que não contenham a palavra fox\n\n"
-grep -i fox phrases.txt
+echo "7) Busque pelas frases que não contenham a palavra fox\n"
+grep -i -v fox phrases.txt
 sleep $longdelay
 
 clear

@@ -3,7 +3,7 @@ clear
 delay="3"
 
 #Exercicio 1
-echo "\n1) Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele"
+echo "1) Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele"
 
 mkdir unix_tests
 cd unix_tests
@@ -84,13 +84,46 @@ ls -a
 sleep $delay
 
 #Exercicio 12
-echo "\n11) Apague o diretório backup"
+echo "\n12) Apague o diretório backup"
 rm -rf backup
 sleep $delay
 
 #Exercicio 13
-echo "\n12) Limpe o terminal"
+echo "\n13) Limpe o terminal"
 
-sleep 5
+sleep $delay
+
+clear
+
+#Criando o arquivo Skills
+touch skills.txt
+
+echo "Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL" >> skills.txt
+
+
+#Exercicio 14
+echo "14) Mostre na tela as 5 primeiras skills do arquivo skills.txt\n"
+
+head -5 skills.txt
+sleep $delay
+
+echo "\n15) Mostre na tela as 4 últimas skills do arquivo skills.txt\n"
+
+tail -4 skills.txt
+sleep $delay
+
+#Exercicio 16
+
+echo "\n16) Apague todos os arquivos que terminem em txt\n"
+
+rm *.txt
+sleep $delay
 
 clear
