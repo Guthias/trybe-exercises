@@ -6,7 +6,14 @@ longdelay="12"
 #Exercicio 1
 echo "1) Na pasta unix_tests, baixe um arquivo com os nomes de todos os países do mundo utilizando o comando curl\n\n"
 
+if [ -e unix_tests]
+then
 cd unix_tests
+else
+mkdir unix_tests
+cd unix_tests
+fi
+
 curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
 sleep $delay
 
@@ -41,7 +48,7 @@ sleep $delay
 
 clear
 #Exercicio 6
-echo "6) Busque novamente por brazil, mas agora utilizando o lower case"
+echo "6) Busque novamente por brazil, mas agora utilizando o lower case\n"
 grep -i brazil countries.txt
 sleep $delay
 
