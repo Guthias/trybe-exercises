@@ -2,6 +2,10 @@
 clear
 delay="3"
 
+if [ -e unix_tests ]
+then
+rm -rf unix_tests
+fi
 #Exercicio 1
 echo "1) Utilizando o terminal, aplique o comando de criação de diretórios que você aprendeu, crie um diretório chamado unix_tests e navegue até ele"
 
