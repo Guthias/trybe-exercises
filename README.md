@@ -16,7 +16,7 @@ Esse repositório contem todas as atividades e projetos que eu [Gustavo Mathias]
 #### Bloco 02: Git, GitHub e Intenet
 
 - [x] 2.1 - Git & Github - O que é e para que serve
-- [ ] 2.2 - Git & Github - Entendendo os comandos
+- [x] 2.2 - Git & Github - Entendendo os comandos
 - [ ] 2.3 - Internet - Entendendo como ela funciona
 
 #### Bloco 03: Introdução - HTML e CSS
