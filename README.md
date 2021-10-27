@@ -17,7 +17,7 @@ Esse repositório contem todas os exercícios que eu [Gustavo Mathias](https://w
 
 - [x] 2.1 - Git & Github - O que é e para que serve
 - [x] 2.2 - Git & Github - Entendendo os comandos
-- [ ] 2.3 - Internet - Entendendo como ela funciona
+- [x] 2.3 - Internet - Entendendo como ela funciona
 
 #### Bloco 03: Introdução - HTML e CSS
 - [ ] 3.1 - Introdução - HTML & CSS
