@@ -1,0 +1,74 @@
+/*Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado ÍMPAR, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).*/
+
+ol li{
+    background-color: #EAC435;
+}
+ol li:nth-child(even){
+    background-color: #61E786;
+}
+ol li:nth-child(odd){
+    text-transform: uppercase;
+}
+
+/*Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta e sólida.*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #DB162F;
+}
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+/*Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li, utilize a propriedade font-weight para deixá-lo negrito.*/
+
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: 700;
+}
+
+/*Na listagem de linguagens de programação, faça com que as 3 primeiras da lista possuam cor de fonte azul e, se alguma possuir "java*" no texto, utilize uma cor de fundo rosa.*/
+.programming-languages :nth-child(-n+3){
+    color: #1BE7FF;
+}
+.programming-languages li[content*="java"]{
+    background-color: #E34A6F
+}
+
+/*(Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"*/
+
+.developer-allies li a{
+    display:block;
+    padding:10px;
+}
+.developer-allies li a:hover{
+    font-weight: 700;
+}
+
+.developer-allies li a[href*="stackoverflow"]:hover{
+    color: #F46036;
+}
+.developer-allies li a[href*="w3schools"]:hover{
+    color: #329F5B;
+}
+.developer-allies li a[href*="mozilla"]:hover{
+    color: #000;
+}
+.developer-allies li a[href*="devdocs"]:hover{
+    color: #FFD23F;
+}
+.developer-allies li a[href*="betrybe"]:hover{
+    color: #0C8346;
+}
