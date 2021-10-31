@@ -1,15 +1,19 @@
+/*Collor Pallete: https://coolors.co/ffc857-2660a4-ff4242-ff7f11-220c10-eafdcf-191919*/
+
 html, body{
     height: 100%;
     max-height: 100vh;
     margin: 0px;
     padding:0px;
     font-family: 'Roboto', sans-serif;
+    background-color: #191919;
 }
 
 .text-container{
     text-align: center;
     margin-top: 15px;
     margin-bottom: 50px;
+    color: #fff;
 }
 /* Organizando a Paleta de Cores*/
 .color-container{
@@ -22,9 +26,12 @@ html, body{
     height:400px;
     width: 20%;
     position: absolute;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 700;
 }
 .color-box:hover{
-    border: 1px solid black;
+    outline: 5px solid #FFC857;
     z-index: 1000;
     cursor: pointer;
 }
@@ -47,4 +54,22 @@ html, body{
 }
 .color-box:nth-child(5){
     left: 80%;
+}
+
+/* Colorindo a Paleta de Cores*/
+.primary-color{
+    background: #2660A4;
+}
+.secondary-color{
+    background: #FF4242;
+}
+.complementary-color{
+    background-color: #FF7F11;
+}
+.dark-color{
+    background-color: #220C10;
+}
+.light-color{
+    background-color: #EAFDCF;
+    color: #000000 !important;
 }
