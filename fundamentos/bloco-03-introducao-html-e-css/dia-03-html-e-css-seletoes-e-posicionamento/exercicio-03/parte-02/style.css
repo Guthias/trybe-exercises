@@ -1,0 +1,50 @@
+html, body{
+    height: 100%;
+    max-height: 100vh;
+    margin: 0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-container{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+/* Organizando a Paleta de Cores*/
+.color-container{
+    position:relative;
+    width:80%;
+    margin: 0 auto;
+}
+.color-box{
+    display: block;
+    height:400px;
+    width: 20%;
+    position: absolute;
+}
+.color-box:hover{
+    border: 1px solid black;
+    z-index: 1000;
+    cursor: pointer;
+}
+.color-box h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+.color-box:nth-child(2){
+    left: 20%;
+}
+.color-box:nth-child(3){
+    left: 40%;
+}
+.color-box:nth-child(4){
+    left: 60%;
+}
+.color-box:nth-child(5){
+    left: 80%;
+}
