@@ -1,0 +1,22 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1, p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+li a{
+    display:block;
+    padding: 20px;
+}
+li a:hover{
+    background-color: #dee678;
+    cursor: pointer;
+}
+li a:active{
+    font-family: 'Fruktur', cursive;
+}
