@@ -9,14 +9,18 @@ a{
     color: #000;
     font-size: 20px;
 }
-li a{
+li *{
     display:block;
     padding: 20px;
 }
-li a:hover{
-    background-color: #dee678;
+li *:hover{
+    transition: all ease-in-out 0.2s;
+    background-color: #78e2e6;
     cursor: pointer;
 }
-li a:active{
+li *:active{
     font-family: 'Fruktur', cursive;
+}
+ul{
+    list-style: none;
 }
