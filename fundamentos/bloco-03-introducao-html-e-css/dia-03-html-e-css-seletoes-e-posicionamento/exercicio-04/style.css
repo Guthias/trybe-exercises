@@ -1,0 +1,11 @@
+/*Classes para listas ordenadas (parte 1)*/
+
+ol li{
+    background-color: #EAC435;
+}
+ol li:nth-child(even){
+    background-color: #61E786;
+}
+ol li:nth-child(odd){
+    text-transform: uppercase;
+}
