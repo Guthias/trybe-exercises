@@ -30,3 +30,11 @@ h6 em{
     border: 1px solid black;
 }
 
+/*Faça todas as li's terem 20px de tamanho de fonte e, para todo texto em itálico dentro de alguma li, utilize a propriedade font-weight para deixá-lo negrito.*/
+
+li{
+    font-size: 20px;
+}
+li em{
+    font-weight: 700;
+}
