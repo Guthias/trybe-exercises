@@ -46,3 +46,29 @@ li em{
 .programming-languages li[content*="java"]{
     background-color: #E34A6F
 }
+
+/*(Bônus) Para cada link na lista de aliados da pessoa desenvolvedora, faça com que ao passar o mouse sobre cada um, o texto fique em negrito e assuma a cor de fonte "temática do site"*/
+
+.developer-allies li a{
+    display:block;
+    padding:10px;
+}
+.developer-allies li a:hover{
+    font-weight: 700;
+}
+
+.developer-allies li a[href*="stackoverflow"]:hover{
+    color: #F46036;
+}
+.developer-allies li a[href*="w3schools"]:hover{
+    color: #329F5B;
+}
+.developer-allies li a[href*="mozilla"]:hover{
+    color: #000;
+}
+.developer-allies li a[href*="devdocs"]:hover{
+    color: #FFD23F;
+}
+.developer-allies li a[href*="betrybe"]:hover{
+    color: #0C8346;
+}
