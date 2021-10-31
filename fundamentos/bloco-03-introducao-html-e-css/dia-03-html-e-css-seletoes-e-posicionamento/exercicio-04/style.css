@@ -1,4 +1,4 @@
-/*Classes para listas ordenadas (parte 1)*/
+/*Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado ÍMPAR, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).*/
 
 ol li{
     background-color: #EAC435;
@@ -9,3 +9,24 @@ ol li:nth-child(even){
 ol li:nth-child(odd){
     text-transform: uppercase;
 }
+
+/*Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta e sólida.*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: #DB162F;
+}
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em,
+h6 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
