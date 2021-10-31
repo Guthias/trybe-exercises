@@ -48,6 +48,8 @@ html, body{
 }
 .color-box:nth-child(3){
     left: 40%;
+    transform: scale(1.10, 1.10);
+    z-index: 10000;
 }
 .color-box:nth-child(4){
     left: 60%;
@@ -72,4 +74,9 @@ html, body{
 .light-color{
     background-color: #EAFDCF;
     color: #000000 !important;
+}
+
+/* Italico nas divs Impar*/
+.color-box:nth-child(odd){
+    font-style: italic;
 }
