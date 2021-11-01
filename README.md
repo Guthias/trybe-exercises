@@ -1,12 +1,12 @@
 # Trybe
 
-Esse repositório contem todas os exercícios que eu [Gustavo Mathias](https://www.linkedin.com/in/guthias/), estou realizando enquanto estudo na [Trybe](https://www.betrybe.com/) :rocket::green_heart:
+Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://www.linkedin.com/in/guthias/), estou realizando enquanto estudo na [Trybe](https://www.betrybe.com/) :rocket::green_heart:
 
 > "A Trybe é uma escola de desenvolvimento web que tem compromentimento genuino com sucesso profissonal das pessoas estudantes. São mais de 1500 horas de formação que aborda fundamentos de desenvolvimento web, desenvolvimento, Front-end, Back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais"
 
 ## Fundamentos de Desenvolvimento WEB :hourglass_flowing_sand:
 
-#### Bloco 01: Unix & Bash
+#### [Bloco 01: Unix & Bash](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-01-unix-e-bash)
 
 - [x] 1.3 - Fundamentos do Desenvolvimento Web
 - [x] 1.3 - Introdução - Unix & Shell
@@ -19,7 +19,7 @@ Esse repositório contem todas os exercícios que eu [Gustavo Mathias](https://w
 - [x] 2.2 - Git & Github - Entendendo os comandos
 - [x] 2.3 - Internet - Entendendo como ela funciona
 
-#### Bloco 03: Introdução - HTML e CSS
+#### [Bloco 03: Introdução - HTML e CSS](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-03-introducao-html-e-css)
 - [x] 3.1 - Introdução - HTML & CSS
 - [x] 3.1 - HTML & CSS - Estruturas de página
 - [x] 3.2 - HTML & CSS - Primeiros passos em CSS
