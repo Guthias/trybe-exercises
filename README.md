@@ -25,9 +25,9 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 3.2 - HTML & CSS - Primeiros passos em CSS
 - [x] 3.3 - HTML & CSS - Seletores e posicionamento
 - [x] 3.4 - HTML Semântico
-- [x] 3.5 - Projeto - Lessons Learned
+- [x] 3.5 - [Projeto - Lessons Learned](https://github.com/Guthias/lessons-learned)
 
-#### Bloco 04: Introdução à JavaScript e Lógica de Programação
+#### [Bloco 04: Introdução à JavaScript e Lógica de Programação](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-04-introducao-a-javascript-e-logica-de-programacao)
 
 - [x] 4.1 Introdução - JavaScript
 - [x] 4.1 Javascript - Primeiros passos
