@@ -1,4 +1,4 @@
-const n = 10;
+const n = 5;
 let line = "";
 
 if (n > 1){
