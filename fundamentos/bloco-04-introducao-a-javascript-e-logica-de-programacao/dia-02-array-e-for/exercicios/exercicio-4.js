@@ -8,4 +8,8 @@ for(number of numbers){
 
 media = somaTotal / numbers.length;
 
-console.log(`A média aritmetica é ${media}`);
+if (media > 20){
+  console.log("Valor maior do que 20");
+} else {
+  console.log("Valor menor ou igual a 20");
+}
