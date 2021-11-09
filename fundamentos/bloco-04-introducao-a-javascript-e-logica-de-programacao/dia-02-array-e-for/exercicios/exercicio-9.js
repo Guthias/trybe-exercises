@@ -4,4 +4,6 @@ for (let count = 1; count <= 25; count+=1){
   numbers.push(count);
 }
 
-console.log(numbers);
+for (number of numbers) {
+  console.log(number / 2);
+}
