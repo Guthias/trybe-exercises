@@ -9,9 +9,7 @@ for (number of numbers){
 }
 
 if (odds.length > 0){
-  for (number of odds){
-    console.log(number)
-  }
+  console.log(`Foi encontrado um total de ${odds.length} numeros impares`);
 } else {
   console.log("Nenhum valor impar foi encontrado")
 }
