@@ -7,7 +7,7 @@ function indiceMaior (numeros) {
   let valorMaior = numeros[0];
 
   for (let i = 0; i < numeros.length; i += 1) {
-    if (indiceMaior < numeros[i]){
+    if (valorMaior < numeros[i]){
       valorMaior = numeros[i];
       indiceMaior = i;
     }
