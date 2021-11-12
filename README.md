@@ -33,7 +33,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 4.1 Javascript - Primeiros passos
 - [x] 4.2 Javascript - Array e loop For
 - [x] 4.3 Javascript - Lógica de Programação e Algoritmos
-- [ ] 4.4 Javascript - Objetos e funções
+- [x] 4.4 Javascript - Objetos e funções
 - [ ] 4.5 Projeto - Playground Functions
 
 #### Bloco 05: JavaScript: DOM, Eventos e Web Storage
