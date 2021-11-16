@@ -1,20 +1,18 @@
 # JavaScript - Primeiros Passos (Bloco 4 Dia 1)
 
-O dia de hoje teve como objetivo realizar a introdução ao JavaScript apresentando os primeiros conceitos de logica e 
-
 ## Conteudos do Dia
-Os conteudos apresentados no dia foram
+Os conteudos que apresentados no dia foram
 
 - Uma apresentação sobre a Historia do JavaScript
 - A diferença entre `var`, `const` e `let`
-- Tipos de variavel
+- Tipos de primitivos
 - Condições`if` e `else`
 - Operadores logicos
 - Como utilizar o `switch case`
 
-## Exericios
+## Exercicios
 
-Durante os exercicios desenvolvi 11 pequenos programas feitos principalmente com `if/else` e `switch/case` além disso utilizei os operadores logicos `(+ , - , * , / , % )` e os operadores condicionais `(> < && ||)`
+Durante os exercicios desenvolvi 11 pequenos programas feitos principalmente com `if/else` e `switch/case` além disso utilizei os operadores logicos `( + , - , * , / , % )` e os operadores condicionais `(> < && ||)`
 
 1. Fiz um programa que recebe duas contantes (numeros) e exibe a soma. subtração, multiplicação, divisão e módulo desses valores
 2. Fiz um programa que recebe dois valores e caso ambos sejam numêros vai ser informado qual dos numeros é maior
