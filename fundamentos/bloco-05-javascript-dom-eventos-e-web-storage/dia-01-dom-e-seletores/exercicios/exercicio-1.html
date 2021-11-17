@@ -61,9 +61,16 @@
         element.innerText = elementContent;
       }
 
+      function allParagraphsUppercase(){
+        let elements = document.getElementsByTagName('p');
+        for (element of elements){
+          element.style.textTransform = 'uppercase';
+        }
+      }
       addLoremIpsum();
       colorCorrection();
       correctTitle();
+      allParagraphsUppercase();
     </script>
   </body>
 </html>
