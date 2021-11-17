@@ -1,7 +1,7 @@
 # Javascript - Lógica de Programação e Algoritmos (Bloco 4 Dia 3)
 
 ## Conteudos do Dia
-O dia 3 do bloco 4 teve como principal objetivo aprimorar nossa capacidade logica para a construção de algoritmos simples e eficientes, aprendemos alguns conceitos como **Baby Steps** e **Complexidade Ciclimática**
+O dia 3 do bloco 4 teve como principal objetivo aprimorar nossa capacidade lógica para a construção de algoritmos simples e eficientes, aprendemos alguns conceitos como **Baby Steps** e **Complexidade Ciclomática**
 
 ## Exercicios
 
