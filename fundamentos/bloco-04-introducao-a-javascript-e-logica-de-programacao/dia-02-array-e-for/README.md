@@ -11,6 +11,10 @@ Os conteudos que apresentados no dia foram
 
 Para os Exercicios de 1 a 7 recebemos um Array para realizar algumas tarefas
 
+```
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+```
+
 1. Imprimir todos os valores utilizando o `console.log()`
 2. Imprimir a soma de todos os valores do Array
 3. Calcular a média aritimetica (Soma total ÷ Numero de elementos) de todos os valores do Array
