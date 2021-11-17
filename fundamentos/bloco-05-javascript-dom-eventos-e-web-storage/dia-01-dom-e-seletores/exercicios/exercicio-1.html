@@ -47,7 +47,15 @@
         element.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum labore repellendus quaerat, aliquid vitae doloremque esse, necessitatibus modi facilis unde non eos repellat aperiam porro ad itaque quasi dolores provident'
       }
 
+      function colorCorrection(){
+        let element = document.getElementsByClassName('main-content')[0];
+        element.style.background = 'rgb(76,164,109)';
+        element = document.querySelector('.center-content');
+        element.style.background = 'white';
+      }
+
       addLoremIpsum();
+      colorCorrection();
     </script>
   </body>
 </html>
