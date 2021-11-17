@@ -67,10 +67,16 @@
           element.style.textTransform = 'uppercase';
         }
       }
+
+      function paragraphContent(){
+        console.log(document.getElementsByTagName('p'));
+      }
+
       addLoremIpsum();
       colorCorrection();
       correctTitle();
       allParagraphsUppercase();
+      paragraphContent();
     </script>
   </body>
 </html>
