@@ -1,4 +1,4 @@
-# JavaScript - Primeiros Passos (Bloco 4 Dia 1)
+# JavaScript - Array e For (Bloco 4 Dia 2)
 
 ## Conteudos do Dia
 Os conteudos que apresentados no dia foram
@@ -10,6 +10,10 @@ Os conteudos que apresentados no dia foram
 ## Exercicios
 
 Para os Exercicios de 1 a 7 recebemos um Array para realizar algumas tarefas
+
+```
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+```
 
 1. Imprimir todos os valores utilizando o `console.log()`
 2. Imprimir a soma de todos os valores do Array
