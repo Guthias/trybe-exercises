@@ -54,8 +54,16 @@
         element.style.background = 'white';
       }
 
+      function correctTitle(){
+        let element = document.getElementsByTagName('h1')[0];
+        let elementContent = element.innerText;
+        elementContent = elementContent.replace('JavaEscripito', 'JavaScript');
+        element.innerText = elementContent;
+      }
+
       addLoremIpsum();
       colorCorrection();
+      correctTitle();
     </script>
   </body>
 </html>
