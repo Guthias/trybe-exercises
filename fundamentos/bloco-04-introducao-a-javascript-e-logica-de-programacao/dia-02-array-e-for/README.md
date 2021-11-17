@@ -1,4 +1,4 @@
-# JavaScript - Primeiros Passos (Bloco 4 Dia 1)
+# JavaScript - Array e For (Bloco 4 Dia 2)
 
 ## Conteudos do Dia
 Os conteudos que apresentados no dia foram
