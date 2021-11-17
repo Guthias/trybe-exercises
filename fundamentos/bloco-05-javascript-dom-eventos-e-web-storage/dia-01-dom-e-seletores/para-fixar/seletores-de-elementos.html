@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="quote-paragraph">Segundo parágrafo!</p>
+      <p class="quote-paragraph">Novo parágrafo</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      document.getElementById('page-title').innerText = 'V for Vendetta';
+      document.getElementById('second-paragraph').innerHTML = 'Remember, remember, the Fifth of November<br>Gunpowder treason and plot<br>I see no reason why gunpowder treason<br>Should ever be forgot';
+      document.getElementById('subtitle').innerText = 'Quotes'
+
+      console.log(document.getElementsByClassName('quote-paragraph'));
+      document.getElementsByClassName('quote-paragraph')[0].style.border = '2px solid blue';
+
+      document.getElementsByTagName('h4')[0].style.color = 'green'
+    </script>
+  </body>
+</html>
