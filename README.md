@@ -37,7 +37,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 4.5 Projeto - Playground Functions
 
 #### Bloco 05: JavaScript: DOM, Eventos e Web Storage
-- [ ] 5.1 JavaScript - DOM e seletores
+- [x] 5.1 JavaScript - DOM e seletores
 - [ ] 5.2 JavaScript - Trabalhando com elementos
 - [ ] 5.3 JavaScript - Eventos
 - [ ] 5.4 JavaScript - Web Storage
