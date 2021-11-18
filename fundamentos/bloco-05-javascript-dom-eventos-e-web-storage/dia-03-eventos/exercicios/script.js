@@ -81,3 +81,23 @@ holidayBtn.addEventListener('click', holidayColorChange);
 
 // 4) Criando botão da Sexta-feira
 createButton('btn-friday', 'Sexta-feira');
+
+// 5) Mudando texto das sexta-feiras
+let fridayChanged = false;
+
+function fridayTextChange(){
+  let fridays = document.querySelectorAll('.friday');
+  
+  for (day of fridays){
+    if (fridayChanged){
+      day.style.fontWeight = 'normal';
+    } else {
+      day.style.fontWeight = 'bold';
+    }
+  }
+
+  fridayChanged = !fridayChanged;
+}
+
+let fridayBtn = document.getElementById('btn-friday');
+fridayBtn.addEventListener('click', fridayTextChange);
