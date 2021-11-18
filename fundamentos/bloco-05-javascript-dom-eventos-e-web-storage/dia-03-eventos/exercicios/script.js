@@ -57,3 +57,23 @@ function createButton (id, text){
 }
 
 createButton('btn-holiday', 'Feriados');
+
+// 3) Fazendo o botão feriados mudar a cor dos dias feriado
+let holidayChanged = false;
+
+function holidayColorChange(){
+  let holidays = document.querySelectorAll('.holiday');
+
+  for (day of holidays){
+    if (holidayChanged){
+      day.style.color = '#777';
+    } else {
+      day.style.color = 'green';
+    }
+  }
+
+  holidayChanged = !holidayChanged;
+}
+
+let holidayBtn = document.getElementById('btn-holiday');
+holidayBtn.addEventListener('click', holidayColorChange);
