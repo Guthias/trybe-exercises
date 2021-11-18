@@ -15,3 +15,7 @@ document.querySelector('.main-content').removeChild(element);
 // centralizando a section right-content
 element = document.querySelector('.right-content');
 element.style.marginRight = 'auto';
+
+// Alterando a cor do elemento center-content
+element = document.querySelector('.center-content');
+element.style.backgroundColor = 'green';
