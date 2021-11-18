@@ -86,6 +86,13 @@
     newElement = document.createElement('section');
     newElement.className = 'right-content';
     document.querySelector('main').appendChild(newElement);
+    
+    // Adicionando uma imagem na section .left-content
+    newElement = document.createElement('img');
+    newElement.className = 'small-image';
+    newElement.setAttribute('src', 'https://picsum.photos/200')
+    document.querySelector('.left-content').appendChild(newElement);
+
     </script>
   </body>
 </html>
