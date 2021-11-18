@@ -101,3 +101,23 @@ function fridayTextChange(){
 
 let fridayBtn = document.getElementById('btn-friday');
 fridayBtn.addEventListener('click', fridayTextChange);
+
+// 6) Efeito de zoom
+function addZoomEventsToDays() {
+  let allDays = document.querySelectorAll('.day');
+
+  for (day of allDays){
+    day.addEventListener('mouseover', zoomIn);
+    day.addEventListener('mouseout', zoomOut);
+  }
+}
+
+function zoomIn (event){
+  event.target.style.fontSize = '3em';
+}
+
+function zoomOut (event){
+  event.target.style.fontSize = '';
+}
+
+addZoomEventsToDays();
