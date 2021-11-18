@@ -107,6 +107,13 @@
       document.getElementById('lista-numeros-extenso').appendChild(newElement)
     }
 
+    // Adionando 3 tags h3 na main
+
+    for (let i = 0; i < 3; i+= 1) {
+    newElement = document.createElement('h3');
+    newElement.innerText = `${i + 1}° h3`; 
+    document.querySelector('main').appendChild(newElement)
+    }
     </script>
   </body>
 </html>
