@@ -7,3 +7,7 @@ let elements = document.getElementsByTagName('h3');
 for (let item of elements){
   item.className = 'description'
 }
+
+// Removendo a section left-content;
+element = document.querySelector('.left-content');
+document.querySelector('.main-content').removeChild(element);
