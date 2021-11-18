@@ -19,3 +19,8 @@ element.style.marginRight = 'auto';
 // Alterando a cor do elemento center-content
 element = document.querySelector('.center-content');
 element.style.backgroundColor = 'green';
+
+// Removendo ultimos numeros da lista
+element = document.querySelector('#lista-numeros-extenso')
+element.removeChild(element.lastElementChild);
+element.removeChild(element.lastElementChild);
