@@ -44,3 +44,16 @@ function createDaysofTheMonth(){
 }
 
 createDaysofTheMonth();
+
+// 2) Criando botão feriados dinamicamente
+function createButton (id, text){
+  let buttonArea = document.querySelector('.buttons-container');
+  let button = document.createElement('button');
+
+  button.id = id;
+  button.innerText = text;
+  
+  buttonArea.appendChild(button);
+}
+
+createButton('btn-holiday', 'Feriados');
