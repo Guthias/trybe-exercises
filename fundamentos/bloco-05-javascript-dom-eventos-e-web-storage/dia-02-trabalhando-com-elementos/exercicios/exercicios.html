@@ -93,6 +93,20 @@
     newElement.setAttribute('src', 'https://picsum.photos/200')
     document.querySelector('.left-content').appendChild(newElement);
 
+    // Adicionando numeros por extenso na .right-content
+    let numbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+    newElement = document.createElement('ul');
+    newElement.id = 'lista-numeros-extenso';
+    document.querySelector('.right-content').appendChild(newElement);
+
+
+    for (let i = 0; i < numbers.length; i+= 1) {
+      newElement = document.createElement('li');
+      newElement.innerText = numbers[i]; 
+      document.getElementById('lista-numeros-extenso').appendChild(newElement)
+    }
+
     </script>
   </body>
 </html>
