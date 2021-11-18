@@ -45,7 +45,7 @@ function createDaysofTheMonth(){
 
 createDaysofTheMonth();
 
-// 2) Criando botão feriados dinamicamente
+// Função para criar botões dinamicamente
 function createButton (id, text){
   let buttonArea = document.querySelector('.buttons-container');
   let button = document.createElement('button');
@@ -56,6 +56,7 @@ function createButton (id, text){
   buttonArea.appendChild(button);
 }
 
+// 2) Criando botão feriados dinamicamente
 createButton('btn-holiday', 'Feriados');
 
 // 3) Fazendo o botão feriados mudar a cor dos dias feriado
@@ -77,3 +78,6 @@ function holidayColorChange(){
 
 let holidayBtn = document.getElementById('btn-holiday');
 holidayBtn.addEventListener('click', holidayColorChange);
+
+// 4) Criando botão da Sexta-feira
+createButton('btn-friday', 'Sexta-feira');
