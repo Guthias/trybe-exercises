@@ -11,3 +11,7 @@ for (let item of elements){
 // Removendo a section left-content;
 element = document.querySelector('.left-content');
 document.querySelector('.main-content').removeChild(element);
+
+// centralizando a section right-content
+element = document.querySelector('.right-content');
+element.style.marginRight = 'auto';
