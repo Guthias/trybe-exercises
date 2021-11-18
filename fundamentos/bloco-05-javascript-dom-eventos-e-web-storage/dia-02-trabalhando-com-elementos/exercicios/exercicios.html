@@ -77,6 +77,11 @@
     newElement.innerHTML = 'Curabitur tellus nibh, eleifend ut ornare at, hendrerit ac velit. Ut eleifend purus pharetra, scelerisque diam ac, pretium neque. Donec a arcu sed felis tempor egestas nec ac est. Integer sit amet sodales enim. Nam ultricies, lectus et tincidunt hendrerit, felis elit commodo nisl, quis molestie dolor diam in tellus. Phasellus metus sapien, eleifend vitae rhoncus id, viverra vel felis. Quisque vel luctus neque, ac volutpat augue. Praesent nibh ex, consequat lobortis ligula nec, vulputate consequat nibh';
     document.querySelector('.main-content .center-content').appendChild(newElement);
 
+    // Adicionando a Tag section com a classe left-content dentro de main
+    newElement = document.createElement('section');
+    newElement.className = 'left-content';
+    document.querySelector('main').appendChild(newElement);
+
     </script>
   </body>
 </html>
