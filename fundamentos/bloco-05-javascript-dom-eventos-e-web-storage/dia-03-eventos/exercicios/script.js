@@ -121,3 +121,16 @@ function zoomOut (event){
 }
 
 addZoomEventsToDays();
+
+// 7) Adicionar span tarefas
+
+function addTask(task){
+  let newTask = document.createElement('span');
+  let myTasks = document.querySelector('.my-tasks');
+
+  newTask.innerText = task;
+
+  myTasks.appendChild(newTask)
+}
+
+addTask('Arrumar o portfolio');
