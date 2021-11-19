@@ -180,3 +180,31 @@ function colorOnDay (event){
     day.style.color = color;
   }
 }
+
+// 11) Adicionando compromissos
+function addCompromisso() {
+  let compromissoContainer = document.querySelector('.input-container')
+  let element = document.createElement('div');
+  
+  let taskText = document.getElementById('task-input').value;
+  
+  if (taskText.trim() === ''){
+    alert('Você não pode adcionar um compromisso vazio');
+    return
+  }
+  element.innerText = taskText;
+
+  compromissoContainer.appendChild(element);
+}
+
+let addTaskBtn = document.getElementById('btn-add');
+addTaskBtn.addEventListener('click', addCompromisso);
+
+// Pressionando com a tecla Enter
+let input = document.getElementById('task-input');
+
+input.addEventListener('keyup', function(event){
+  if (event.code === 'Enter'){
+    addCompromisso();
+  }
+})
