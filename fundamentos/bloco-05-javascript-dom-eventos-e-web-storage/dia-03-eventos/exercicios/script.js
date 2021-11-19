@@ -39,6 +39,9 @@ function createDaysofTheMonth(){
       element.classList.add('friday');
     }
 
+    // Evento para o exercicio 10
+    element.addEventListener('click', colorOnDay);
+    
     days.appendChild(element);
   }
 }
@@ -158,3 +161,22 @@ function selectedOnDiv(event){
 let divTask = document.querySelector('.tasks');
 
 divTask.addEventListener('click', selectedOnDiv);
+
+// 10 Marcando calendario com cor da div
+
+function colorOnDay (event){
+  let divTask = document.querySelector('.selected');
+  
+  if (divTask === null){
+    return
+  }
+
+  let color = divTask.style.backgroundColor;
+  let day = event.target;
+
+  if(day.style.color === color){
+    day.style.color = 'rgb(119,119,119)';
+  } else {
+    day.style.color = color;
+  }
+}
