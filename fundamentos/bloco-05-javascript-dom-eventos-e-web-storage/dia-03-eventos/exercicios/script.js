@@ -134,3 +134,17 @@ function addTask(task){
 }
 
 addTask('Arrumar o portfolio');
+
+// 8 Adicionar div em my-tasks
+
+function newTaskDiv (color){
+  let newElement = document.createElement('div');
+  let myTasks = document.querySelector('.my-tasks');
+
+  newElement.className = 'tasks';
+  newElement.style.backgroundColor = color;
+  
+  myTasks.appendChild(newElement);
+}
+
+newTaskDiv('green');
