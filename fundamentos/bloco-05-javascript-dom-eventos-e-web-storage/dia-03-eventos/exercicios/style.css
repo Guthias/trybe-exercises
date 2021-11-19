@@ -153,3 +153,26 @@ label {
   margin: 0px;
   padding: 10px 0;
 }
+
+.selected{
+  position: relative !important;
+}
+
+.selected:before, .selected:after{
+  content: '';
+  background-color: #FFF;
+  width: 4px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
+
+.selected:before {
+  transform: translate(-50%, -50%) rotateZ(45deg);
+}
+
+.selected:after {
+  transform: translate(-50%, -50%) rotateZ(135deg);
+}
