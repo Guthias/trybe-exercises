@@ -148,3 +148,13 @@ function newTaskDiv (color){
 }
 
 newTaskDiv('green');
+
+// 9 Adicionando class selected na div
+
+function selectedOnDiv(event){
+  event.target.classList.toggle('selected');
+}
+
+let divTask = document.querySelector('.tasks');
+
+divTask.addEventListener('click', selectedOnDiv);
