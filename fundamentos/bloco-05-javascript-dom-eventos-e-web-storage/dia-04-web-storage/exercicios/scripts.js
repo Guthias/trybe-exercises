@@ -7,32 +7,13 @@ const lineHeightSelect = document.getElementById('line-height-select');
 const fontFamilySelect = document.getElementById('font-family-select');
 
 // Criando classes para alterar os elementos
-function changeBackgroundColor(event) {
-  mainContent.style.backgroundColor = event.target.value;
-}
-
-function changeFontColor(event) {
-  mainContent.style.color = event.target.value;
-}
-
-function changeFontSize (event) {
-  let fontSize = event.target.value;
-  mainContent.style.fontSize = fontSize + 'px';
-}
-
-function changeLineHeight (event) {
-  let lineHeight = event.target.value;
-  mainContent.style.lineHeight = lineHeight + 'em';
-}
-
-function changeFontFamily (event) {
-  let fontFamily = event.target.value;
-  mainContent.style.fontFamily = fontFamily;
+function changeStyleProperty (property, value) {
+  mainContent.style[property] = value;
 }
 
 // Adicionando Eventos aos elementos
-backgroundSelect.addEventListener('change', changeBackgroundColor);
-colorSelect.addEventListener('change', changeFontColor);
-sizeSelect.addEventListener('change', changeFontSize);
-lineHeightSelect.addEventListener('change', changeLineHeight)
-fontFamilySelect.addEventListener('change', changeFontFamily)
+backgroundSelect.addEventListener('change', (event) => changeStyleProperty('backgroundColor', event.target.value));
+colorSelect.addEventListener('change', (event) => changeStyleProperty('color', event.target.value));
+sizeSelect.addEventListener('change', (event) => changeStyleProperty('fontSize', event.target.value));
+lineHeightSelect.addEventListener('change', (event) => changeStyleProperty('lineHeight', event.target.value))
+fontFamilySelect.addEventListener('change', (event) => changeStyleProperty('fontFamily', event.target.value))
