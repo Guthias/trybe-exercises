@@ -6,9 +6,26 @@ const sizeSelect = document.getElementById('size-select');
 const lineHeightSelect = document.getElementById('line-height-select');
 const fontFamilySelect = document.getElementById('font-family-select');
 
+let styleProperties = {};
+
+window.onload = function() {
+  styleProperties = JSON.parse(localStorage.getItem(styleProperties))
+
+  for (key in styleProperties){
+    changeStyleProperty(key, styleProperties[key]);
+  }
+}
+
 // Criando classes para alterar os elementos
 function changeStyleProperty (property, value) {
   mainContent.style[property] = value;
+  saveLocalStorage(property, value)
+}
+
+// Salvando alterações no Local Storage
+function saveLocalStorage (property, value){
+  styleProperties[property] = value;
+  localStorage.setItem(styleProperties, JSON.stringify(styleProperties));
 }
 
 // Adicionando Eventos aos elementos
