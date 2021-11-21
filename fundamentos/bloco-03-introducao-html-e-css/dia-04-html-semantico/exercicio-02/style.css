@@ -18,6 +18,8 @@ header h1{
 }
 nav{
   background-color: #2F2504;
+  position: sticky;
+  top: 0;
 }
 nav ul li{
   display:inline;
@@ -37,4 +39,58 @@ nav ul a{
 }
 nav ul a:hover{
   background-color: #594E36;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.image-area{
+  width: 80%;
+  margin: 40px auto;
+}
+
+.image-area img {
+  width: 100%;
+  max-width: 100%;
+}
+
+table * {
+  border: 2px solid black;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+
+footer {
+  background-color: #1D3461;
+  color: white;
+  padding: 25px 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+footer a { 
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
 }
