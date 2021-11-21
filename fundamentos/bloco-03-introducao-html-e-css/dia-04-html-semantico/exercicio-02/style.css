@@ -50,8 +50,19 @@ main {
 section {
   margin-bottom: 50px;
 }
+
 table {
   margin: 0 auto;
+}
+
+.image-area{
+  width: 80%;
+  margin: 40px auto;
+}
+
+.image-area img {
+  width: 100%;
+  max-width: 100%;
 }
 
 table * {
@@ -81,4 +92,5 @@ footer {
 footer a { 
   color: white;
   text-decoration: underline;
+  font-weight: 700;
 }
