@@ -18,6 +18,8 @@ header h1{
 }
 nav{
   background-color: #2F2504;
+  position: sticky;
+  top: 0;
 }
 nav ul li{
   display:inline;
