@@ -67,3 +67,16 @@ table * {
 .red {
   color: red;
 }
+
+footer {
+  background-color: #1D3461;
+  color: white;
+  padding: 25px 15px;
+  font-size: 22px;
+  text-align: center;
+}
+
+footer a { 
+  color: white;
+  text-decoration: underline;
+}
