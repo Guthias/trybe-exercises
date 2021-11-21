@@ -38,3 +38,19 @@ nav ul a{
 nav ul a:hover{
   background-color: #594E36;
 }
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table * {
+  border: 2px solid black;
+  padding: 15px 20px;
+  text-align: center;
+}
