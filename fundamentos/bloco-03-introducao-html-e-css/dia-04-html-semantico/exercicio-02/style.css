@@ -45,6 +45,9 @@ main {
   text-align: justify;
 }
 
+section {
+  margin-bottom: 50px;
+}
 table {
   margin: 0 auto;
 }
@@ -53,4 +56,14 @@ table * {
   border: 2px solid black;
   padding: 15px 20px;
   text-align: center;
+}
+
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
 }
