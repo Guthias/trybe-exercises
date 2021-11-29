@@ -13,15 +13,29 @@ function optionToStates() {
   }
 }
 
-function validDate(event) {
+function validDate(date) {
+  const day = parseInt(date.slice(0, 2));
+  const month = parseInt(date.slice(2, 4));
+
+  if (!(day > 0 && day <= 31 && month > 0 && month <= 12)) {
+    alert('A data que você inseriu é invalida'); 
+  }
+}
+
+function formatDate(event) {
   const regexRemove = /\D+/gm;
   const regexAdd = /(\d{2})(\d{2})(\d{4})/gm
   let content = event.target.value;
   content = content.replace(regexRemove, '');
-  event.target.value = content.replace(regexAdd, '$1/$2/$3');
+  content = content.replace(regexAdd, '$1/$2/$3');
+  event.target.value = content;
+  
+  if (content.length === 10) {
+    validDate(content);
+  }
 }
 
-dateInput.addEventListener('keyup', validDate);
+dateInput.addEventListener('keyup', formatDate);
 window.onload = () => {
   optionToStates();
 }
