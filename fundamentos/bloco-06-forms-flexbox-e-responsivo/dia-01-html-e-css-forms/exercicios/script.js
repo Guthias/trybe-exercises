@@ -68,6 +68,8 @@ const professionalData = [
   }, {
     type: 'date',
     id: 'start-date',
+    labelContent: 'Data de Inicio',
+    maxLength: 8,
     required: true
   }
 ];
@@ -94,15 +96,18 @@ function formatDate(event) {
   }
 }
 
-function renderInputText(objectArray) {
+function renderInputText(objectArray, date = false) {
   const input = document.createElement('input');
   input.id = objectArray.id;
-  input.type = objectArray.type;
+  input.type = 'text';
   if (objectArray.required) {
     input.required = true
   }
   input.maxLength = objectArray.maxLength;
 
+  if (date) {
+    input.addEventListener('keyup', formatDate);
+  }
   return input;
 }
 
@@ -156,7 +161,6 @@ function createRow(fieldset, objectArray) {
   const element = document.createElement('div');
   const label = document.createElement('label');
   let input;
-
   label.innerText = objectArray.labelContent;
   element.appendChild(label);
 
@@ -165,17 +169,17 @@ function createRow(fieldset, objectArray) {
     case 'select': input = renderSelect(objectArray); break;
     case 'radio': input = renderInputRadio(objectArray); break;
     case 'textarea': input = renderTextArea(objectArray); break;
+    case 'date': input = renderInputText(objectArray, true); break;
     default: console.log(`Erro: Não é possivel criar objeto do tipo ${objectArray.type}`)
   }
 
-  console.log(input)
   element.appendChild(input);
   fieldset.appendChild(element);
 }
 
 function createFieldSet(objectData) {
   const fieldset = document.createElement('fieldset');
-  for(let i = 0; i < personalData.length; i += 1) {
+  for(let i = 0; i < objectData.length; i += 1) {
     createRow(fieldset, objectData[i]);
   }
   form.appendChild(fieldset);
@@ -186,7 +190,6 @@ function createForms() {
   createFieldSet(professionalData);
 }
 
-// dateInput.addEventListener('keyup', formatDate);
 window.onload = () => {
   createForms();
 }
