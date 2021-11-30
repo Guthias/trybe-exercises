@@ -85,6 +85,7 @@ function formatDate(event) {
     validDate(content);
   }
 }
+
 function renderInputText(objectArray) {
   const input = document.createElement('input');
   input.id = objectArray.id;
@@ -95,6 +96,27 @@ function renderInputText(objectArray) {
   input.maxLength = objectArray.maxLength;
 
   return input;
+}
+
+function renderInputRadio(objectArray) {
+  const element = document.createElement('div');
+  let input;
+  let label;
+
+  for (let i = 0; i < objectArray.options.length; i += 1) {
+    label = document.createElement('label');
+    input = document.createElement('input');
+
+    input.name = objectArray.id;
+    input.value = objectArray.options[i];
+    input.type = 'radio';
+
+    label.appendChild(input);
+    label.innerHTML += objectArray.options[i];
+    element.appendChild(label);
+  }
+
+  return element;
 }
 
 function renderSelect(objectArray) {
@@ -125,10 +147,13 @@ function createRow(fieldset, objectArray) {
     element.appendChild(input);
   }
 
-
   if (objectArray.type === 'select') {
     input = renderSelect(objectArray);
-    console.log(input);
+    element.appendChild(input);
+  }
+
+  if (objectArray.type === 'radio') {
+    input = renderInputRadio(objectArray);
     element.appendChild(input);
   }
 
