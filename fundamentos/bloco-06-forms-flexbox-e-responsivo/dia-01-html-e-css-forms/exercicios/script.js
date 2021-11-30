@@ -64,17 +64,6 @@ const professionalData = [
   }
 ];
 
-function optionToStates() {
-  let element; 
-  
-  for (let i = 0; i < states.length; i += 1) {
-    element = document.createElement('option');
-    element.innerText = states[i];
-    element.value = states[i];
-    statesSelect.appendChild(element);
-  }
-}
-
 function validDate(date) {
   const day = parseInt(date.slice(0, 2));
   const month = parseInt(date.slice(2, 4));
@@ -108,6 +97,21 @@ function renderInputText(objectArray) {
   return input;
 }
 
+function renderSelect(objectArray) {
+  const select = document.createElement('select');
+  let option;
+  select.id = objectArray.id;
+
+  for (let i = 0; i < objectArray.options.length; i += 1) {
+    option = document.createElement('option');
+    option.innerText = states[i];
+    option.value = states[i];
+    select.appendChild(option);
+  }
+
+  return select
+}
+
 function createRow(fieldset, objectArray) {
   const element = document.createElement('div');
   const label = document.createElement('label');
@@ -118,6 +122,13 @@ function createRow(fieldset, objectArray) {
 
   if (objectArray.type === 'text') {
     input = renderInputText(objectArray);
+    element.appendChild(input);
+  }
+
+
+  if (objectArray.type === 'select') {
+    input = renderSelect(objectArray);
+    console.log(input);
     element.appendChild(input);
   }
 
