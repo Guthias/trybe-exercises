@@ -1,7 +1,6 @@
 const form = document.getElementById('form');
 const statesSelect = document.getElementById('state');
 const dateInput = document.getElementById('start-date');
-const createButton = document.getElementById('generate-cv');
 const curriculumArea = document.getElementById('curriculum');
 
 const states = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
@@ -185,8 +184,31 @@ function createFieldSet(objectData) {
   form.appendChild(fieldset);
 }
 
+function renderCurriculumRow(rowData) {
+  const row = document.createElement('div');
+  let input;
+  let value;
+
+  if (rowData.type === 'radio') {
+    input = document.querySelector(`input[name=${rowData.id}]:checked`).value;
+  } else {
+    input = document.getElementById(rowData.id).value;
+  }
+
+  row.innerText = `${rowData.labelContent}: ${input}`;
+  curriculumArea.appendChild(row);
+}
+
 function generateCurriculum (event) {
   event.preventDefault();
+  
+  for (let i = 0; i < personalData.length; i += 1) {
+    renderCurriculumRow(personalData[i]);
+  };
+
+  for (let i = 0; i < professionalData.length; i += 1) {
+    renderCurriculumRow(professionalData[i]);
+  };
 }
 
 function createForms() {
