@@ -1,7 +1,9 @@
+const form = document.getElementById('form');
 const statesSelect = document.getElementById('state');
 const dateInput = document.getElementById('start-date');
 const createButton = document.getElementById('generate-cv');
 const curriculumArea = document.getElementById('curriculum');
+
 const states = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
 
 const personalData = [
@@ -153,18 +155,22 @@ function createRow(fieldset, objectArray) {
     case 'select': input = renderSelect(objectArray); break;
     case 'radio': input = renderInputRadio(objectArray); break;
   }
-  
+
   element.appendChild(input);
   fieldset.appendChild(element);
 }
 
-function createForms() {
-  const form = document.querySelector('form');
-  const element = document.createElement('fieldset');
-  form.appendChild(element);
+function createFieldSet(objectData) {
+  const fieldset = document.createElement('fieldset');
   for(let i = 0; i < personalData.length; i += 1) {
-    createRow(element, personalData[i]);
+    createRow(fieldset, objectData[i]);
   }
+  form.appendChild(fieldset);
+}
+
+function createForms() {
+  createFieldSet(personalData);
+  createFieldSet(professionalData);
 }
 
 // dateInput.addEventListener('keyup', formatDate);
