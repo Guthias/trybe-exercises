@@ -1,7 +1,63 @@
 const statesSelect = document.getElementById('state');
 const dateInput = document.getElementById('start-date');
-
+const createButton = document.getElementById('generate-cv');
+const curriculumArea = document.getElementById('curriculum');
 const states = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
+
+const personalData = [
+  { 
+    type: 'text',
+    id: 'name',
+    labelContent: "Nome",
+    maxlength: 40,
+    required: true
+  }, { 
+    type: 'text',
+    id: 'email',
+    labelContent: "Email",
+    maxlength: 50,
+    required: true
+  }, { 
+    type: 'text',
+    id: 'city',
+    labelContent: "Cidade",
+    maxlength: 28,
+    required: true
+  }, { 
+    type: 'radio',
+    id: 'residence',
+    labelContent: "Moradia",
+    options: ['casa', 'apartamento'],
+    required: true
+  }
+]
+
+const professionalData = [
+  { 
+    type: 'textarea',
+    id: 'summary',
+    labelContent: "Resumo do curriculo",
+    maxlength: 1000,
+    required: true
+  }, { 
+    type: 'text',
+    id: 'name',
+    labelContent: "Cargo",
+    maxlength: 40,
+    required: true
+  }, { 
+    type: 'textarea',
+    id: 'name',
+    labelContent: "Cargo",
+    maxlength: 40,
+    required: true
+  }, {
+    type: 'date',
+    id: 'start-date',
+    required: true
+  }
+];
+
 function optionToStates() {
   let element; 
   
