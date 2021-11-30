@@ -54,15 +54,15 @@ const professionalData = [
     required: true
   }, { 
     type: 'text',
-    id: 'name',
+    id: 'role',
     labelContent: "Cargo",
     maxLength: 40,
     required: true
   }, { 
     type: 'textarea',
-    id: 'name',
-    labelContent: "Cargo",
-    maxLength: 40,
+    id: 'role-summary',
+    labelContent: "Resumo do Cargo",
+    maxLength: 500,
     required: true
   }, {
     type: 'date',
