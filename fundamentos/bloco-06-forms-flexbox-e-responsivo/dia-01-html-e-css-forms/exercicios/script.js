@@ -142,6 +142,16 @@ function renderSelect(objectArray) {
   return select
 }
 
+function renderTextArea(objectArray) {
+  const textArea = document.createElement('textarea');
+  textArea.id = objectArray.id;
+  if (objectArray.required) {
+    textArea.required = true
+  }
+  textArea.maxLength = objectArray.maxLength;
+  return textArea;
+}
+
 function createRow(fieldset, objectArray) {
   const element = document.createElement('div');
   const label = document.createElement('label');
@@ -154,8 +164,11 @@ function createRow(fieldset, objectArray) {
     case 'text': input = renderInputText(objectArray); break;
     case 'select': input = renderSelect(objectArray); break;
     case 'radio': input = renderInputRadio(objectArray); break;
+    case 'textarea': input = renderTextArea(objectArray); break;
+    default: console.log(`Erro: Não é possivel criar objeto do tipo ${objectArray.type}`)
   }
 
+  console.log(input)
   element.appendChild(input);
   fieldset.appendChild(element);
 }
