@@ -185,9 +185,18 @@ function createFieldSet(objectData) {
   form.appendChild(fieldset);
 }
 
+function generateCurriculum (event) {
+  event.preventDefault();
+}
+
 function createForms() {
   createFieldSet(personalData);
   createFieldSet(professionalData);
+  const element = document.createElement('button');
+  element.id = 'generate-cv';
+  element.innerText = 'Enviar';
+  form.appendChild(element);
+  element.addEventListener('click', generateCurriculum);
 }
 
 window.onload = () => {
