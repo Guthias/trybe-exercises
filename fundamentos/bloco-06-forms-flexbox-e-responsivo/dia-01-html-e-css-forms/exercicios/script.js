@@ -148,23 +148,14 @@ function createRow(fieldset, objectArray) {
   label.innerText = objectArray.labelContent;
   element.appendChild(label);
 
-  if (objectArray.type === 'text') {
-    input = renderInputText(objectArray);
-    element.appendChild(input);
+  switch (objectArray.type) {
+    case 'text': input = renderInputText(objectArray); break;
+    case 'select': input = renderSelect(objectArray); break;
+    case 'radio': input = renderInputRadio(objectArray); break;
   }
-
-  if (objectArray.type === 'select') {
-    input = renderSelect(objectArray);
-    element.appendChild(input);
-  }
-
-  if (objectArray.type === 'radio') {
-    input = renderInputRadio(objectArray);
-    element.appendChild(input);
-  }
-
-  fieldset.appendChild(element);
   
+  element.appendChild(input);
+  fieldset.appendChild(element);
 }
 
 function createForms() {
