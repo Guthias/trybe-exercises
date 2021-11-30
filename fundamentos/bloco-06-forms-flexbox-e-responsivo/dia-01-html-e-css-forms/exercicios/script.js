@@ -9,19 +9,25 @@ const personalData = [
     type: 'text',
     id: 'name',
     labelContent: "Nome",
-    maxlength: 40,
+    maxLength: 40,
     required: true
   }, { 
     type: 'text',
     id: 'email',
     labelContent: "Email",
-    maxlength: 50,
+    maxLength: 50,
+    required: true
+  }, { 
+    type: 'text',
+    id: 'cpf',
+    labelContent: "CPF",
+    maxLength: 11,
     required: true
   }, { 
     type: 'text',
     id: 'city',
     labelContent: "Cidade",
-    maxlength: 28,
+    maxLength: 28,
     required: true
   }, { 
     type: 'select',
@@ -43,19 +49,19 @@ const professionalData = [
     type: 'textarea',
     id: 'summary',
     labelContent: "Resumo do curriculo",
-    maxlength: 1000,
+    maxLength: 1000,
     required: true
   }, { 
     type: 'text',
     id: 'name',
     labelContent: "Cargo",
-    maxlength: 40,
+    maxLength: 40,
     required: true
   }, { 
     type: 'textarea',
     id: 'name',
     labelContent: "Cargo",
-    maxlength: 40,
+    maxLength: 40,
     required: true
   }, {
     type: 'date',
