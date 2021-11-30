@@ -24,6 +24,12 @@ const personalData = [
     maxlength: 28,
     required: true
   }, { 
+    type: 'select',
+    id: 'state',
+    labelContent: "Estado",
+    options: states,
+    required: true
+  }, { 
     type: 'radio',
     id: 'residence',
     labelContent: "Moradia",
@@ -90,8 +96,45 @@ function formatDate(event) {
     validDate(content);
   }
 }
+function renderInputText(objectArray) {
+  const input = document.createElement('input');
+  input.id = objectArray.id;
+  input.type = objectArray.type;
+  if (objectArray.required) {
+    input.required = true
+  }
+  input.maxLength = objectArray.maxLength;
 
-dateInput.addEventListener('keyup', formatDate);
+  return input;
+}
+
+function createRow(fieldset, objectArray) {
+  const element = document.createElement('div');
+  const label = document.createElement('label');
+  let input;
+
+  label.innerText = objectArray.labelContent;
+  element.appendChild(label);
+
+  if (objectArray.type === 'text') {
+    input = renderInputText(objectArray);
+    element.appendChild(input);
+  }
+
+  fieldset.appendChild(element);
+  
+}
+
+function createForms() {
+  const form = document.querySelector('form');
+  const element = document.createElement('fieldset');
+  form.appendChild(element);
+  for(let i = 0; i < personalData.length; i += 1) {
+    createRow(element, personalData[i]);
+  }
+}
+
+// dateInput.addEventListener('keyup', formatDate);
 window.onload = () => {
-  optionToStates();
+  createForms();
 }
