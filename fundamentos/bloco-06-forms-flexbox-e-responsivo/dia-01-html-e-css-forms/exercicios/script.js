@@ -259,9 +259,19 @@ function generateCurriculum (event) {
   } 
 }
 
+function generateForm(categories) {
+  let sameCategoryElements
+  for(let i = 0; i < categories.length; i += 1) {
+    sameCategoryElements = dataForElements.filter((elementData) => {
+      return elementData.category === categories[i];
+    });
+    createFieldSet(sameCategoryElements);
+  }
+}
+
 function createForms() {
-  createFieldSet(dataForElements);
-  // createFieldSet(professionalData);
+  generateForm(['personal', 'professional']);
+
   const element = document.createElement('button');
   element.id = 'generate-cv';
   element.innerText = 'Enviar';
