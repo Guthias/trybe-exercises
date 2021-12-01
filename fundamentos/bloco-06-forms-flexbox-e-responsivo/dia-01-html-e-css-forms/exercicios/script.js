@@ -244,13 +244,22 @@ function allValid(elementsData) {
 function generateCurriculum (event) {
   event.preventDefault();
   
-  for (let i = 0; i < personalData.length; i += 1) {
-    renderCurriculumRow(personalData[i]);
-  };
-
-  for (let i = 0; i < professionalData.length; i += 1) {
-    renderCurriculumRow(professionalData[i]);
-  };
+  if(allValid(personalData)) {
+    for (let i = 0; i < personalData.length; i += 1) {
+      renderCurriculumRow(personalData[i]);
+    };
+  } else {
+    curriculumArea.innerHTML = 'Preencha todos os dados antes de prosseguir';
+  }
+  
+  if(allValid(professionalData)) {
+    for (let i = 0; i < professionalData.length; i += 1) {
+      renderCurriculumRow(professionalData[i]);
+    };
+  } else {
+    curriculumArea.innerHTML = 'Preencha todos os dados antes de prosseguir';
+  }
+  
 }
 
 function createForms() {
