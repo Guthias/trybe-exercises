@@ -5,73 +5,79 @@ const curriculumArea = document.getElementById('curriculum');
 
 const states = ['Acre','Alagoas','Amapá','Amazonas','Bahia','Ceará','Distrito Federal','Espirito Santo','Goiás','Maranhão','Mato Grosso do Sul','Mato Grosso','Minas Gerais','Pará','Paraíba','Paraná','Pernambuco','Piauí','Rio de Janeiro','Rio Grande do Norte','Rio Grande do Sul','Rondônia','Roraima','Santa Catarina','São Paulo','Sergipe','Tocantins'];
 
-const personalData = [
+const dataForElements = [
   { 
+    category: 'personal',
     type: 'text',
     id: 'name',
     labelContent: "Nome",
     maxLength: 40,
     required: true
   }, { 
+    category: 'personal',
     type: 'text',
     id: 'email',
     labelContent: "Email",
     maxLength: 50,
     required: true
   }, { 
+    category: 'personal',
     type: 'text',
     id: 'cpf',
     labelContent: "CPF",
     maxLength: 11,
     required: true
   }, { 
+    category: 'personal',
     type: 'text',
     id: 'city',
     labelContent: "Cidade",
     maxLength: 28,
     required: true
   }, { 
+    category: 'personal',
     type: 'select',
     id: 'state',
     labelContent: "Estado",
     options: states,
     required: true
   }, { 
+    category: 'personal',
     type: 'radio',
     id: 'residence',
     labelContent: "Moradia",
     options: ['casa', 'apartamento'],
     required: true
-  }
-]
-
-const professionalData = [
-  { 
+  }, { 
+    category: 'professional',
     type: 'textarea',
     id: 'summary',
     labelContent: "Resumo do curriculo",
     maxLength: 1000,
     required: true
   }, { 
+    category: 'professional',
     type: 'text',
     id: 'role',
     labelContent: "Cargo",
     maxLength: 40,
     required: true
   }, { 
+    category: 'professional',
     type: 'textarea',
     id: 'role-summary',
     labelContent: "Resumo do Cargo",
     maxLength: 500,
     required: true
   }, {
+    category: 'professional',
     type: 'date',
     id: 'start-date',
     labelContent: 'Data de Inicio',
     maxLength: 8,
     required: true
   }
-];
+]
 
 function validDate(date) {
   const day = parseInt(date.slice(0, 2));
@@ -244,27 +250,18 @@ function allValid(elementsData) {
 function generateCurriculum (event) {
   event.preventDefault();
   
-  if(allValid(personalData)) {
+  if(allValid(dataForElements)) {
     for (let i = 0; i < personalData.length; i += 1) {
-      renderCurriculumRow(personalData[i]);
+      renderCurriculumRow(dataForElements[i]);
     };
   } else {
     curriculumArea.innerHTML = 'Preencha todos os dados antes de prosseguir';
-  }
-  
-  if(allValid(professionalData)) {
-    for (let i = 0; i < professionalData.length; i += 1) {
-      renderCurriculumRow(professionalData[i]);
-    };
-  } else {
-    curriculumArea.innerHTML = 'Preencha todos os dados antes de prosseguir';
-  }
-  
+  } 
 }
 
 function createForms() {
-  createFieldSet(personalData);
-  createFieldSet(professionalData);
+  createFieldSet(dataForElements);
+  // createFieldSet(professionalData);
   const element = document.createElement('button');
   element.id = 'generate-cv';
   element.innerText = 'Enviar';
