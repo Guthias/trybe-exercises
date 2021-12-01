@@ -229,6 +229,18 @@ function validateElement(elementData) {
   return valid;
 }
 
+function allValid(elementsData) {
+  let valid = true;
+  for(let i = 0; i < elementsData.length; i += 1) {
+    valid = validateElement(elementsData[i])
+
+    if(!valid){
+      return false;
+    }
+  }
+  return true;
+}
+
 function generateCurriculum (event) {
   event.preventDefault();
   
