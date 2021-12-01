@@ -187,8 +187,8 @@ function createFieldSet(objectData) {
 function renderCurriculumRow(rowData) {
   const row = document.createElement('div');
   let input;
-  let value;
 
+  validateElement(rowData);
   if (rowData.type === 'radio') {
     input = document.querySelector(`input[name=${rowData.id}]:checked`).value;
   } else {
@@ -197,6 +197,36 @@ function renderCurriculumRow(rowData) {
 
   row.innerText = `${rowData.labelContent}: ${input}`;
   curriculumArea.appendChild(row);
+}
+
+function haveContent(elementData) {
+  let element;
+  
+  if (elementData.type === 'radio') {
+    element = document.querySelectorAll(`input[name=${elementData.id}]:checked`);
+    if (element) {
+      return true;
+    }
+    return false;
+  }
+
+  element = document.getElementById(elementData.id);
+
+  console.log(element.value);
+  if(element.value === ''){
+    return false;
+  }
+  return true;
+}
+
+function validateElement(elementData) {
+  let valid = true;
+  if (elementData.hasOwnProperty('required')){
+    if (elementData.required === true) {
+      valid = haveContent(elementData); 
+    }
+  }
+  return valid;
 }
 
 function generateCurriculum (event) {
