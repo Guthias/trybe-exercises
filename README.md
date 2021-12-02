@@ -48,7 +48,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 5.7 [(Bônus) Projeto - Carta Misteriosa](https://github.com/Guthias/mistery-letter)
 
 #### Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
-- [ ] 6.1 HTML & CSS - Forms
+- [x] 6.1 HTML & CSS - Forms
 - [ ] 6.2 Bibliotecas JavaScript e Frameworks CSS
 - [ ] 6.3 Introdução - CSS Flexbox
 - [ ] 6.3 CSS Flexbox - Parte 1
