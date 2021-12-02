@@ -304,7 +304,7 @@ function createForms() {
   const element = document.createElement('button');
   element.id = 'generate-cv';
   element.innerText = 'Enviar';
-  element.className = 'btn btn-primary btn-lg';
+  element.className = 'd-block col-8 mx-auto btn btn-primary btn-lg';
 
   form.appendChild(element);
   element.addEventListener('click', generateCurriculum);
