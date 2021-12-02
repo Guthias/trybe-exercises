@@ -102,6 +102,7 @@ function renderInputText(objectArray, date = false) {
   const input = document.createElement('input');
   input.id = objectArray.id;
   input.type = 'text';
+  input.className = 'form-control';
   if (objectArray.required) {
     input.required = true
   }
@@ -123,11 +124,13 @@ function renderInputRadio(objectArray) {
   for (let i = 0; i < objectArray.options.length; i += 1) {
     label = document.createElement('label');
     input = document.createElement('input');
-
+    label.className = 'd-block form-check-label';
     input.name = objectArray.id;
     input.value = objectArray.options[i];
-    input.type = 'radio';
 
+    input.type = 'radio';
+    input.className = 'form-check-input';
+    
     label.appendChild(input);
     label.innerHTML += objectArray.options[i];
     element.appendChild(label);
@@ -140,6 +143,7 @@ function renderSelect(objectArray) {
   const select = document.createElement('select');
   let option;
   select.id = objectArray.id;
+  select.className = 'form-select'
 
   for (let i = 0; i < objectArray.options.length; i += 1) {
     option = document.createElement('option');
@@ -154,6 +158,7 @@ function renderSelect(objectArray) {
 function renderTextArea(objectArray) {
   const textArea = document.createElement('textarea');
   textArea.id = objectArray.id;
+  textArea.className = 'form-control';
   if (objectArray.required) {
     textArea.required = true
   }
@@ -165,7 +170,10 @@ function createRow(fieldset, objectArray) {
   const element = document.createElement('div');
   const label = document.createElement('label');
   let input;
+  element.className = 'mb-3';
+
   label.innerText = objectArray.labelContent;
+  label.className = 'form-label'
   element.appendChild(label);
 
   switch (objectArray.type) {
@@ -296,6 +304,8 @@ function createForms() {
   const element = document.createElement('button');
   element.id = 'generate-cv';
   element.innerText = 'Enviar';
+  element.className = 'btn btn-primary btn-lg';
+
   form.appendChild(element);
   element.addEventListener('click', generateCurriculum);
 }
