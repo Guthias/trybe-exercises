@@ -79,26 +79,23 @@ const dataForElements = [
   }
 ]
 
-function validDate(date) {
-  const day = parseInt(date.slice(0, 2));
-  const month = parseInt(date.slice(2, 4));
-
+function invalidDate(date) {
+  const formatedDate = date.replace('/', '');
+  const day = parseInt(formatedDate.slice(0, 2));
+  const month = parseInt(formatedDate.slice(2, 4));
   if (!(day > 0 && day <= 31 && month > 0 && month <= 12)) {
-    alert('A data que você inseriu é invalida'); 
+    return true;
   }
+  return false;
 }
 
-function formatDate(event) {
+function formatDate(dateToFormat) {
   const regexRemove = /\D+/gm;
   const regexAdd = /(\d{2})(\d{2})(\d{4})/gm
-  let content = event.target.value;
+  let content = dateToFormat;
   content = content.replace(regexRemove, '');
   content = content.replace(regexAdd, '$1/$2/$3');
-  event.target.value = content;
-  
-  if (content.length === 10) {
-    validDate(content);
-  }
+  return content;
 }
 
 function renderInputText(objectArray, date = false) {
@@ -111,7 +108,9 @@ function renderInputText(objectArray, date = false) {
   input.maxLength = objectArray.maxLength;
 
   if (date) {
-    input.addEventListener('keyup', formatDate);
+    input.addEventListener('keyup', (event) => {
+      event.target.value = formatDate(event.target.value);
+    });
   }
   return input;
 }
@@ -218,7 +217,6 @@ function haveContent(elementData) {
 
   element = document.getElementById(elementData.id);
 
-  console.log(element.value);
   if(element.value === ''){
     return false;
   }
@@ -247,6 +245,25 @@ function allValid(elementsData) {
   return true;
 }
 
+function ckeckDate() {
+  let allDates;
+
+  for(let i = 0; i < dataForElements.length; i += 1) {
+    allDates = dataForElements.filter((elementData) => {
+      return elementData.type === 'date';
+    });
+  }
+
+  for(let i = 0; i < allDates.length; i += 1) {
+    const element = document.getElementById(allDates[i].id);
+
+    if(invalidDate(formatDate(element.value))) {
+      return false;
+    }
+  }
+  return true
+}
+
 function generateCurriculum (event) {
   event.preventDefault();
   
@@ -255,6 +272,10 @@ function generateCurriculum (event) {
       renderCurriculumRow(dataForElements[i]);
     };
   } else {
+    if(!ckeckDate()) {
+      curriculumArea.innerHTML = 'A data que vocẽ inseriu é invalida';
+      return;
+    }
     curriculumArea.innerHTML = 'Preencha todos os dados antes de prosseguir';
   } 
 }
