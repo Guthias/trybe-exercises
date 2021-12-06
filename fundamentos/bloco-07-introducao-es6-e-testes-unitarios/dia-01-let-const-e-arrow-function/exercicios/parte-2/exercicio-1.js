@@ -1,4 +1,4 @@
-function fatorial(n) {
+const fatorial = n => {
   let fatorial = 1;
   for (let count = n; count > 1; count --) {
     fatorial = fatorial * count;
