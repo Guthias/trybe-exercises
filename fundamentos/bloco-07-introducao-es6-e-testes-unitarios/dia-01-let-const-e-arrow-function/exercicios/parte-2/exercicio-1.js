@@ -1,9 +1,9 @@
 const fatorial = n => {
-  let fatorial = 1;
-  for (let count = n; count > 1; count --) {
-    fatorial = fatorial * count;
+  if (n > 1) {
+    return n * fatorial(n - 1);
+  } else {
+    return 1
   }
-  return fatorial
 }
 
 console.log(fatorial(0)); // 1
