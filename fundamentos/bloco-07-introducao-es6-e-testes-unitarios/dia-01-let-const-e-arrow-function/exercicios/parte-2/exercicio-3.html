@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloco 7 Dia 1 Exercicio 3</title>
+</head>
+<body>
+  <div id="counter">Você ainda não deu nenhum clique</div>
+  <button id="clickOnMe">Clique em mim</button>
+  <script>
+    const counter = document.getElementById('counter');
+    const clickButton = document.getElementById('clickOnMe');
+    let clickCount = 0;
+    clickButton.addEventListener('click', () => {
+      clickCount += 1;
+      counter.innerText = `Você clicou ${clickCount} vezes`;
+    });
+  </script>
+</body>
+</html>
