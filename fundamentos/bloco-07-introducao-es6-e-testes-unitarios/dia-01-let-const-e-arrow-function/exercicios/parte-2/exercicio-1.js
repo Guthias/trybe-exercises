@@ -1,10 +1,4 @@
-const fatorial = n => {
-  if (n > 1) {
-    return n * fatorial(n - 1);
-  } else {
-    return 1
-  }
-}
+const fatorial = n => n > 1 ? n * fatorial(n - 1) : 1;
 
 console.log(fatorial(0)); // 1
 console.log(fatorial(1)); // 1
