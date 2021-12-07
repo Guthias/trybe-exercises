@@ -49,4 +49,18 @@ const showObjectValues = object => {
 
 const allLessons = Object.assign({}, {lesson1}, {lesson2}, {lesson3});
 
-console.log(allLessons)
+// console.log(allLessons)
+
+// Exercicio 6
+
+const allStudents = () => {
+  keys = Object.keys(allLessons);
+  let totalSum = 0;
+  for (let i = 0; i < keys.length; i += 1) {
+    if (allLessons[keys[i]].hasOwnProperty('numeroEstudantes')) {
+      totalSum += allLessons[keys[i]]['numeroEstudantes'];
+    }
+  }
+  return totalSum;
+}
+console.log(allStudents());
