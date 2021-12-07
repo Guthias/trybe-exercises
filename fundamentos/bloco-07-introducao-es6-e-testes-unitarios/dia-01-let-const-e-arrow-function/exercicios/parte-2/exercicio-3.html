@@ -5,10 +5,65 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bloco 7 Dia 1 Exercicio 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet"> 
+  
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    
+    body {
+      background-color: #2E86AB;
+      font-family: Roboto, sans-serif;
+      user-select: none;
+    }
+
+    #counter {
+      color: white;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 28px;
+      font-weight: 700;
+      background-color: #BB0A21;
+      color: white;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      margin-top: 10px;
+      transition: all ease-in-out 0.2s;
+    }
+
+    button:hover {
+      background-color: #800c1b;
+    }
+  </style>
 </head>
 <body>
-  <div id="counter">Você ainda não deu nenhum clique</div>
-  <button id="clickOnMe">Clique em mim</button>
+  <div class="container">
+    <div id="counter">Você ainda não deu nenhum clique</div>
+    <button id="clickOnMe">Clique em mim</button>
+  </div>
   <script>
     const counter = document.getElementById('counter');
     const clickButton = document.getElementById('clickOnMe');
