@@ -63,4 +63,10 @@ const allStudents = () => {
   }
   return totalSum;
 }
-console.log(allStudents());
+// console.log(allStudents());
+
+// Exercicio 7
+
+const getValueByNumber = (object, index) => Object.values(object)[index];
+
+console.log(getValueByNumber(lesson1, 0));
