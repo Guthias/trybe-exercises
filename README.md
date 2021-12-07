@@ -47,16 +47,16 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 5.7 [(Bônus) Projeto - Adivinhe a Cor](https://github.com/Guthias/guess-the-rgb)
 - [x] 5.7 [(Bônus) Projeto - Carta Misteriosa](https://github.com/Guthias/mistery-letter)
 
-#### Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo
+#### [Bloco 06: HTML e CSS: Forms, Flexbox e Responsivo](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-06-forms-flexbox-e-responsivo/)
 - [x] 6.1 HTML & CSS - Forms
 - [ ] 6.2 Bibliotecas JavaScript e Frameworks CSS
 - [ ] 6.3 Introdução - CSS Flexbox
 - [ ] 6.3 CSS Flexbox - Parte 1
 - [ ] 6.4 CSS Flexbox - Parte 2
 - [ ] 6.5 CSS Responsivo - Mobile First
-- [ ] 6.6 Projeto - Trybewarts
+- [x] [6.6 Projeto - Trybewarts (Dupla)](https://github.com/Guthias/trybewarts)
 
-#### Bloco 07: Introdução à JavaScript ES6 e Testes Unitários
+#### [Bloco 07: Introdução à JavaScript ES6 e Testes Unitários](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-07-introducao-es6-e-testes-unitarios)
 - [x] 7.1 JavaScript ES6 - let, const, arrow functions e template literals
 - [ ] 7.2 JavaScript ES6 - Objects
 - [ ] 7.3 Primeiros passos em Jest
