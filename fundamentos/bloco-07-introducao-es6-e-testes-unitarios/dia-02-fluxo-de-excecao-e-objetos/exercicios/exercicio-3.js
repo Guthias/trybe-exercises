@@ -18,3 +18,13 @@ const lesson3 = {
   turno: 'noite',
 };
 
+const addValue = (object, key, value) => {
+  if (object.hasOwnProperty(key)) {
+    throw new Error('Essa propriedade já existe')
+  }
+  object[key] = value
+};
+
+addValue(lesson2, 'turno', 'noite');
+
+console.log(lesson2);
