@@ -36,3 +36,26 @@ const mathStudents = () => {
 }
 
 console.log(mathStudents());
+
+// Exercicio 2
+
+const createReport = (object, teacher) => {
+  const keys = Object.keys(object);
+  const classes = [];
+  let students = 0;
+
+  for (let i = 0; i < keys.length; i += 1) {
+    if (object[keys[i]]['professor'] === teacher) {
+      students += object[keys[i]]['numeroEstudantes'];
+      classes.push(object[keys[i]]['materia']);
+    }
+  }
+
+  return {
+    professor: teacher,
+    aulas: classes,
+    estudantes: students
+  }
+}
+
+console.log(createReport(allLessons, 'Maria Clara'));
