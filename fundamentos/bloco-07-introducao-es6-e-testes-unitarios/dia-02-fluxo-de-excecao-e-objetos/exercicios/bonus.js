@@ -18,3 +18,21 @@ const allLessons = {
     turno: 'noite'
   }
 }
+
+// Exercicio 1
+
+const mathStudents = () => {
+  let students = 0;
+  const allLessonsArray = Object.entries(allLessons);
+
+  for (let i = 0; i < allLessonsArray.length; i += 1) {
+    
+    if (allLessonsArray[i][1]['materia'] === 'Matemática') {
+      students += allLessonsArray[i][1]['numeroEstudantes']
+    }
+  }
+
+  return `Numero total de estudantes de Matemática: ${students}`;
+}
+
+console.log(mathStudents());
