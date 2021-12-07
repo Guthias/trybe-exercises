@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Calculadora</title>
+</head>
+<body>
+  <p>Informe dois números para realizar a soma:</p>
+  <label for='value1'>Valor 1:</label>
+  <input type='text' id='value1'>
+  <label for='value2'>Valor 2:</label>
+  <input type='text' id='value2'>
+  <button id='button'>Somar</button>
+  <p id='result'></p>
+  <script>
+    function sum(a, b) {
+      if (a === '' || b === '') {
+        throw new Error('Uma das casas esta vazia');
+      }
+      if (isNaN(a) || isNaN(b)) {
+        throw new Error('Um dos valores não é um numero');
+      }
+      const result = parseInt(a) + parseInt(b);
+      return result;
+    }
+    
+    function renderSum() {
+      const value1 = document.getElementById('value1').value;
+      const value2 = document.getElementById('value2').value;
+      try {
+        document.getElementById('result').innerHTML = `Resultado: ${sum(value1, value2)}`;
+      } catch (error) {
+        document.getElementById('result').innerHTML = error.message;
+      } finally {
+        clearInput();
+      }
+    }
+
+    function clearInput() {      
+      document.getElementById('value1').value = '';
+      document.getElementById('value2').value = '';
+    }
+
+    window.onload = () => {
+      const button = document.getElementById('button');
+      button.addEventListener('click', renderSum);
+    }
+  </script>
+</body>
+</html>
