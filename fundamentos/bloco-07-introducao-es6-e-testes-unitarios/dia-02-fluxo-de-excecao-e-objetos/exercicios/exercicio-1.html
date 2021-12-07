@@ -15,17 +15,26 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
-    function sum() {
+    function sum(a, b) {
+      const result = parseInt(a) + parseInt(b);
+      return result;
+    }
+    
+    function renderSum() {
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
-      const result = parseInt(value1) + parseInt(value2);
-      document.getElementById('result').innerHTML = `Resultado: ${result}`;
+      document.getElementById('result').innerHTML = `Resultado: ${sum(value1, value2)}`;
+      clearInput();
+    }
+
+    function clearInput() {      
       document.getElementById('value1').value = '';
       document.getElementById('value2').value = '';
     }
+
     window.onload = () => {
       const button = document.getElementById('button');
-      button.addEventListener('click', sum);
+      button.addEventListener('click', renderSum);
     }
   </script>
 </body>
