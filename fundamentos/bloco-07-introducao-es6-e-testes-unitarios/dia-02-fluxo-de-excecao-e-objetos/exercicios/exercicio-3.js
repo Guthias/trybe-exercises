@@ -69,4 +69,11 @@ const allStudents = () => {
 
 const getValueByNumber = (object, index) => Object.values(object)[index];
 
-console.log(getValueByNumber(lesson1, 0));
+// console.log(getValueByNumber(lesson1, 0));
+
+// Exercicio 8
+
+const verifyPair = (object, key, value) => object[key] === value;
+
+console.log(verifyPair(lesson3, 'turno', 'noite')); // true,
+console.log(verifyPair(lesson3, 'materia', 'Maria Clara')); // false
