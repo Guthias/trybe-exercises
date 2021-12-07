@@ -36,5 +36,10 @@ const showKeys = object => {
 
 // Exercicio 3
 const showObjectLength = object => console.log(`Esse objeto tem ${Object.keys(object).length} chaves`);
-showObjectLength(lesson1);
+// showObjectLength(lesson1);
 
+const showObjectValues = object => {
+  values = Object.values(object);
+  console.log(`Os valores desse objeto são ${values.slice(0, - 1).join(', ')} e ${values.slice(-1)}`);
+}
+showObjectValues(lesson1);
