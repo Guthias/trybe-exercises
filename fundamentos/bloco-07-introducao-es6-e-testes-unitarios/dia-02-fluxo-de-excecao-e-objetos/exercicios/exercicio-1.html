@@ -16,6 +16,12 @@
   <p id='result'></p>
   <script>
     function sum(a, b) {
+      if (a === '' || b === '') {
+        throw new Error('Uma das casas esta vazia');
+      }
+      if (isNaN(a) || isNaN(b)) {
+        throw new Error('Um dos valores não é um numero');
+      }
       const result = parseInt(a) + parseInt(b);
       return result;
     }
@@ -23,8 +29,13 @@
     function renderSum() {
       const value1 = document.getElementById('value1').value;
       const value2 = document.getElementById('value2').value;
-      document.getElementById('result').innerHTML = `Resultado: ${sum(value1, value2)}`;
-      clearInput();
+      try {
+        document.getElementById('result').innerHTML = `Resultado: ${sum(value1, value2)}`;
+      } catch (error) {
+        document.getElementById('result').innerHTML = error.message;
+      } finally {
+        clearInput();
+      }
     }
 
     function clearInput() {      
