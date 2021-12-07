@@ -25,6 +25,10 @@ const addValue = (object, key, value) => {
   object[key] = value
 };
 
-addValue(lesson2, 'turno', 'noite');
+const showKeys = object => {
+  keys = Object.keys(object);
+  console.log(`As chaves desse objeto são ${keys.slice(0, - 1).join(', ')} e ${keys.slice(-1)}`);
+}
 
-console.log(lesson2);
+addValue(lesson2, 'turno', 'noite');
+showKeys(lesson3);
