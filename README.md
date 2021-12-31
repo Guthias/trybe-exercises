@@ -60,7 +60,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 7.1 JavaScript ES6 - let, const, arrow functions e template literals
 - [x] 7.2 JavaScript ES6 - Objects
 - [ ] 7.3 Primeiros passos em Jest
-- [ ] 7.4 Projeto - JavaScript Testes Unitários
+- [x] [7.4 Projeto - JavaScript Testes Unitários](https://github.com/Guthias/js-unit-tests)
 
 #### Bloco 08: Higher Order Functions do JavaScript ES6
 - [ ] 8.1 JavaScript ES6 - Introdução a Higher Order Functions
