@@ -79,25 +79,6 @@ const dataForElements = [
   }
 ]
 
-function invalidDate(date) {
-  const formatedDate = date.replace('/', '');
-  const day = parseInt(formatedDate.slice(0, 2));
-  const month = parseInt(formatedDate.slice(2, 4));
-  if (!(day > 0 && day <= 31 && month > 0 && month <= 12)) {
-    return true;
-  }
-  return false;
-}
-
-function formatDate(dateToFormat) {
-  const regexRemove = /\D+/gm;
-  const regexAdd = /(\d{2})(\d{2})(\d{4})/gm
-  let content = dateToFormat;
-  content = content.replace(regexRemove, '');
-  content = content.replace(regexAdd, '$1/$2/$3');
-  return content;
-}
-
 function renderInputText(objectArray, date = false) {
   const input = document.createElement('input');
   input.id = objectArray.id;
@@ -109,9 +90,7 @@ function renderInputText(objectArray, date = false) {
   input.maxLength = objectArray.maxLength;
 
   if (date) {
-    input.addEventListener('keyup', (event) => {
-      event.target.value = formatDate(event.target.value);
-    });
+    input.id = 'datepicker';
   }
   return input;
 }
@@ -312,4 +291,14 @@ function createForms() {
 
 window.onload = () => {
   createForms();
+  document.getElementById('datepicker').DatePickerX.init( {
+    format: 'dd/mm/yyyy',
+    weekDayLabels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
+    shortMonthLabels: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+    singleMonthLabels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+    titleFormatDay: 'd MM, yyyy',
+    todayButton: false,
+    mondayFirst: false,
+    clearButton: false
+  });
 }
