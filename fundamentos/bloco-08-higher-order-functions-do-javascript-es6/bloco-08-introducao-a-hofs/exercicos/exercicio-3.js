@@ -10,8 +10,8 @@ const valuation = (correct, student, values) => {
 }
 
 const points = valuation(RIGHT_ANSWERS, STUDENT_ANSWERS, (correct, student) => {
-  if (student === 'N.A') return;
-  if (student === correct) 1;
+  if (student === 'N.A') return 0;
+  if (student === correct) return 1;
   return -0.5;
 });
 
