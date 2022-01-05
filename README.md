@@ -62,7 +62,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [ ] 7.3 Primeiros passos em Jest
 - [x] [7.4 Projeto - JavaScript Testes Unitários](https://github.com/Guthias/js-unit-tests)
 
-#### Bloco 08: Higher Order Functions do JavaScript ES6
+#### [Bloco 08: Higher Order Functions do JavaScript ES6](https://github.com/Guthias/trybe-exercises/tree/main/fundamentos/bloco-08-higher-order-functions-do-javascript-es6/)
 - [x] 8.1 JavaScript ES6 - Introdução a Higher Order Functions
 - [ ] 8.2 JavaScript ES6 - Higher Order Functions - forEach, find, some, every, sort
 - [ ] 8.3 JavaScript ES6 - Higher Order Functions - map e filter
