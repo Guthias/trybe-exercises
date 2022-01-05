@@ -19,3 +19,8 @@ const dragon = {
 };
 
 const battleMembers = { mage, warrior, dragon };
+
+const dragonAttack = () => {
+  const damage = Math.round(Math.random() * dragon.strength);
+  return damage > 15 ? damage : 15;
+}
