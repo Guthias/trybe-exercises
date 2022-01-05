@@ -38,20 +38,20 @@ const mageAttack = () => {
 }
 
 const gameActions = {
-  warriorRound: () => {
-    const damage = warriorAttack();
-    warrior.damage = damage;
-    dragon.healthPoints -= damage;
+  warriorTurn: (warriorAttack) => {
+    const warriorDamage = warriorAttack();
+    warrior.damage = warriorDamage;
+    dragon.healthPoints -= warriorDamage;
   },
 
-  mageRound: () => {
+  mageTurn: (mageAttack) => {
     const round = mageAttack();
     mage.damage = round.damage;
     mage.mana = round.mana;
     dragon.healthPoints -= round.damage;
   },
 
-  dragonAttack: () => {
+  dragonTurn: (dragonAttack) => {
     const damage = dragonAttack();
     dragon.damage = damage;
     warrior.healthPoints -= damage;
