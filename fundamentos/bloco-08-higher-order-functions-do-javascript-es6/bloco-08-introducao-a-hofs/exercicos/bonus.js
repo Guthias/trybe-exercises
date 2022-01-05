@@ -24,3 +24,5 @@ const dragonAttack = () => {
   const damage = Math.round(Math.random() * dragon.strength);
   return damage > 15 ? damage : 15;
 }
+
+const warriorAttack = () => Math.round((Math.random() * warrior.weaponDmg) * warrior.strength);
