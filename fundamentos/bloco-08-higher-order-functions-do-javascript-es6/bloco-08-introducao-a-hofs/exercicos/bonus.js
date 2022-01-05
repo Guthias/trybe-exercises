@@ -26,3 +26,13 @@ const dragonAttack = () => {
 }
 
 const warriorAttack = () => Math.round((Math.random() * warrior.weaponDmg) * warrior.strength);
+
+const mageAttack = () => {
+  const damage = Math.round((Math.random() * 2) * mage.intelligence)
+  if (mage.mana < 15) console.log('Não possui mana o suficiente');
+
+  return {
+    damage: mage.mana >= 15 ? damage : 0,
+    mana: mage.mana >= 15 ? mage.mana - 15 : mage.mana,
+  }
+}
