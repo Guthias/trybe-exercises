@@ -36,3 +36,25 @@ const mageAttack = () => {
     mana: mage.mana >= 15 ? mage.mana - 15 : mage.mana,
   }
 }
+
+const gameActions = {
+  warriorRound: () => {
+    const damage = warriorAttack();
+    warrior.damage = damage;
+    dragon.healthPoints -= damage;
+  },
+
+  mageRound: () => {
+    const round = mageAttack();
+    mage.damage = round.damage;
+    mage.mana = round.mana;
+    dragon.healthPoints -= round.damage;
+  },
+
+  dragonAttack: () => {
+    const damage = dragonAttack();
+    dragon.damage = damage;
+    warrior.healthPoints -= damage;
+    mage.healthPoints -= damage;
+  }
+}
