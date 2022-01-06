@@ -6,8 +6,6 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
-const verifyAges = (arr, minimumAge) => {
-  //Adicione seu código aqui
-}
+const verifyAges = (arr, minimumAge) => arr.every(person => person.age >= minimumAge);
 
 console.log(verifyAges(people, 18));
