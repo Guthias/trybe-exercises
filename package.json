@@ -1,0 +1,19 @@
+{
+  "name": "trybe-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guthias/trybe-exercises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/Guthias/trybe-exercises#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}
