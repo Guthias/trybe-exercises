@@ -31,7 +31,16 @@ function getPokemonDetails(filter, callback) {
   }, 2000);
 }
 
-getPokemonDetails();
+getPokemonDetails(
+  (pokemon) => pokemon.type === 'Fire',
+  (error, message) => {
+    if(error) {
+      throw error
+    } else {
+      console.log(message);
+    }
+  }
+);
 
 module.exports = {
   getPokemonDetails,
