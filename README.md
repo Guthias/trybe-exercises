@@ -71,7 +71,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [ ] 8.6 Projeto - Zoo functions
 
 #### Bloco 09: JavaScript e Testes Assíncronos
-- [ ] 9.1 JavaScript Assíncrono e Callbacks
+- [x] 9.1 JavaScript Assíncrono e Callbacks
 - [ ] 9.2 JavaScript Assíncrono - Fetch API e async/await
 - [ ] 9.3 Jest - Testes Assíncronos
 - [ ] 9.4 Projeto - Carrinho de Compras
