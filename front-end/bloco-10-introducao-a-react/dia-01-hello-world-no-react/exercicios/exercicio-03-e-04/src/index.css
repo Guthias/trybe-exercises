@@ -32,3 +32,11 @@ code {
   color: white;
   text-align: center;
 }
+
+.footer {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: 700;
+  color: black;
+}

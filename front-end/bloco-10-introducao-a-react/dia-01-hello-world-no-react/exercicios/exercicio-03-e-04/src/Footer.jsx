@@ -1,6 +1,8 @@
+import './index.css'
+
 const Footer = () => {
   return (
-    <footer>E isso é só o começo...</footer>
+    <footer className='footer'>E isso é só o começo...</footer>
   );
 }
 
