@@ -1,3 +1,5 @@
+import './index.css'
+
 const conteudos = [
   {
     conteudo: 'High Order Functions',
@@ -23,11 +25,13 @@ const conteudos = [
 
 const Content = () => {
   return (
-    conteudos.map((conteudo) => <div>
-      <h3>Conteudo: {conteudo.conteudo}</h3>
-      <p>Bloco: {conteudo.bloco}</p>
-      <p>Status: {conteudo.status}</p>
-    </div>)
+    <div className='content-container'>
+      {conteudos.map((conteudo) => <div className='content-card'>
+        <h3>{conteudo.conteudo}</h3>
+        <p>Bloco: {conteudo.bloco}</p>
+        <p>Status: {conteudo.status}</p>
+      </div>)}
+    </div>
   );
 }
 
