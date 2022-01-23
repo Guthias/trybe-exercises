@@ -23,3 +23,12 @@ code {
   padding: 20px;
   border: 1px solid black;
 }
+
+.header {
+  background-color: rgb(7, 50, 99);
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
