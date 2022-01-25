@@ -82,7 +82,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 10.1 Introdução - Front-end
 - [x] 10.1 Introdução - React
 - [x] 10.1 'Hello, world!' no React!
-- [ ] 10.2 Componentes React
+- [x] 10.2 Componentes React
 - [ ] 10.3 Projeto - Sistema Solar
 
 
