@@ -1,15 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function showMessage() {
-  console.log('Você clicou no botão')
-}
-function App() {
-  return (
-    <div>
-      <button onClick={showMessage}>Clique em mim</button>
-    </div>
-  );
+class App extends React.Component {
+  showMessage() {
+    console.log('Você clicou no botão')
+  }
+
+  render () {
+    return (
+      <div>
+        <button onClick={this.showMessage}>Clique em mim</button>
+      </div>
+    );
+  }
 }
 
 export default App;
