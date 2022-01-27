@@ -3,8 +3,20 @@ import pokemons from "../data";
 import Pokemon from "./Pokemon";
 
 class Pokedex extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      typedText: '',
+    }
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
   handleChange({ target }) {
-    console.log(target.value);
+    this.setState({
+      typedText: target.value,
+    });
+    console.log(this.state.typedText);
   }
 
   render () {
