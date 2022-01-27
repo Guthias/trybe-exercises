@@ -3,18 +3,25 @@ import React from 'react';
 class App extends React.Component {
   constructor () {
     super();
-
-    this.showMessage = this.showMessage.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    
+    this.state = {
+      countClick: 0,
+    }
   }
 
-  showMessage() {
-    console.log(this)
+  handleClick() {
+    
+    this.setState((oldState, _props) => ({
+      countClick: oldState.countClick + 1,
+    }))
   }
 
   render () {
     return (
       <div>
-        <button onClick={this.showMessage}>Clique em mim</button>
+        <p>{ this.state.countClick }</p>
+        <button onClick={this.handleClick}>Clique em mim</button>
       </div>
     );
   }
