@@ -16,7 +16,6 @@ class Pokedex extends React.Component {
     this.setState({
       typedText: target.value,
     });
-    console.log(this.state.typedText);
   }
 
   render () {
@@ -24,12 +23,15 @@ class Pokedex extends React.Component {
       <>
         <h1 className="pokedex-title">Pokedex</h1>
 
-        <input onChange={this.handleChange} type="text"/>
+        <input onChange={this.handleChange} type="text" />
 
         <div className="pokedex">
-          { pokemons.map((pokemon) => (
-            <Pokemon key={pokemon.id} pokemon={pokemon}/> 
-          ))}
+          { pokemons
+            .filter(({ name }) =>  name.toLowerCase().includes(this.state.typedText.toLowerCase()))
+            .map((pokemon) => (
+              <Pokemon key={pokemon.id} pokemon={pokemon}/> 
+            ))
+          }
         </div>
       </>
     );
