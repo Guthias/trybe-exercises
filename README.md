@@ -87,7 +87,7 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 
 
 #### Bloco 11: Bloco 11: Componentes com Estado, Eventos e Formulários com React
-- [ ] 11.1 Componentes com estado e eventos
+- [x] 11.1 Componentes com estado e eventos
 - [ ] 11.2 Formulários no React
 - [ ] 11.3 Projeto - Tryunfo
 
