@@ -43,3 +43,13 @@ code {
   height: 100%;
   object-fit: cover;
 }
+
+.pokedex-input {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-size: 22px;
+  padding: 5px;
+  text-align: center;
+}

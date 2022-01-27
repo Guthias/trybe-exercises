@@ -23,7 +23,12 @@ class Pokedex extends React.Component {
       <>
         <h1 className="pokedex-title">Pokedex</h1>
 
-        <input onChange={this.handleChange} type="text" />
+        <input 
+          className="pokedex-input"
+          onChange={this.handleChange}
+          type="text"
+          placeholder="Digite o nome de um pokemon"
+        />
 
         <div className="pokedex">
           { pokemons
