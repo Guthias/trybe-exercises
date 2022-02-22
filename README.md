@@ -68,13 +68,13 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [ ] 8.3 JavaScript ES6 - Higher Order Functions - map e filter
 - [ ] 8.4 JavaScript ES6 - Higher Order Functions - reduce
 - [ ] 8.5 JavaScript ES6 - spread operator, parâmetro rest, destructuring e mais
-- [ ] 8.6 Projeto - Zoo functions
+- [x] [8.6 Projeto - Zoo functions](https://github.com/Guthias/zoo-functions)
 
 #### Bloco 09: JavaScript e Testes Assíncronos
 - [x] 9.1 JavaScript Assíncrono e Callbacks
 - [ ] 9.2 JavaScript Assíncrono - Fetch API e async/await
 - [ ] 9.3 Jest - Testes Assíncronos
-- [ ] 9.4 Projeto - Carrinho de Compras
+- [x] [9.4 Projeto - Carrinho de Compras](https://github.com/Guthias/shopping-cart)
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
@@ -83,22 +83,22 @@ Esse repositório contem todos os exercícios que eu [Gustavo Mathias](https://w
 - [x] 10.1 Introdução - React
 - [x] 10.1 'Hello, world!' no React!
 - [x] 10.2 Componentes React
-- [ ] 10.3 Projeto - Sistema Solar
+- [x] 10.3 Projeto - Sistema Solar
 
 
 #### Bloco 11: Bloco 11: Componentes com Estado, Eventos e Formulários com React
 - [x] 11.1 Componentes com estado e eventos
 - [ ] 11.2 Formulários no React
-- [ ] 11.3 Projeto - Tryunfo
+- [x] [11.3 Projeto - Tryunfo](https://github.com/Guthias/tryunfo)
 
 #### Bloco 12: Ciclo de Vida de Componentes e React Router
 - [ ] 12.1 Ciclo de vida de componentes
 - [ ] 12.2 React Router
-- [ ] 12.3 Projeto - TrybeTunes
+- [x] [12.3 Projeto - TrybeTunes](https://github.com/Guthias/trybetunes)
 
 #### Bloco 13: Metodologias Ágeis
-- [ ] 13.1 Metodologias Ágeis
-- [ ] 13.2 Projeto - Frontend Online Store
+- [x] 13.1 Metodologias Ágeis
+- [x] 13.2 Projeto - Frontend Online Store
 
 #### Bloco 14: Testes automatizados com React Testing Library
 - [ ] 14.1 RTL - Primeiros passos
