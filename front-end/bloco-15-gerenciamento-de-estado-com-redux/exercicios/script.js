@@ -15,18 +15,17 @@ function colorReducer(state = INITIAL_STATE, action) {
   let newColors = [...colors];
   switch(action.type) {
     case 'NEXT_COLOR':
-      if (index + 1 === colors.length) {
-        newColors = [...colors, newColor()];
-        console.log('entrou');
-      }
+      if (index + 1 === colors.length) newColors = [...colors, newColor()];
       return {
         ...state,
         colors: newColors,
         index: index + 1,
       }
     case 'PREVIOUS_COLOR':
+      if (index === 0) newColors = [newColor(), ...colors];
       return {
         ...state,
+        colors: newColors,
         index: state.index > 0 ? state.index - 1 : 0,
       }
     default:
