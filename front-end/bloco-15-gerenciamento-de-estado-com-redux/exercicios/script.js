@@ -1,5 +1,6 @@
 const nextButton = document.getElementById('next');
 const previousButton = document.getElementById('previous');
+const color = document.getElementById('value');
 
 const INITIAL_STATE = {
   colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
@@ -25,10 +26,14 @@ function colorReducer(state = INITIAL_STATE, action) {
 
 const store = Redux.createStore(colorReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
+store.subscribe(() => {
+  const { colors, index } = store.getState();
+  color.innerText = colors[index];
+});
+
 previousButton.addEventListener('click', () => {
   store.dispatch({ type: 'PREVIOUS_COLOR' });
 });
-
 
 nextButton.addEventListener('click', () => {
   store.dispatch({ type: 'NEXT_COLOR' });
