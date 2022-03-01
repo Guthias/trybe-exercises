@@ -7,12 +7,22 @@ const INITIAL_STATE = {
   index: 0,
 };
 
+const NUMBER_COLORS = 16777215;
+const newColor = () => '#' + Math.floor(Math.random() * NUMBER_COLORS).toString(16);
+
 function colorReducer(state = INITIAL_STATE, action) {
+  const { colors, index } = state;
+  let newColors = [...colors];
   switch(action.type) {
     case 'NEXT_COLOR':
+      if (index + 1 === colors.length) {
+        newColors = [...colors, newColor()];
+        console.log('entrou');
+      }
       return {
         ...state,
-        index: state.index < state.colors.length ? state.index + 1 : state.colors.length,
+        colors: newColors,
+        index: index + 1,
       }
     case 'PREVIOUS_COLOR':
       return {
