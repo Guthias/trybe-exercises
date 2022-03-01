@@ -4,7 +4,20 @@ const INITIAL_STATE = {
 };
 
 function colorReducer(state = INITIAL_STATE, action) {
-  return state;
+  switch(action.type) {
+    case 'NEXT_COLOR':
+      return {
+        ...state,
+        index: state.index < state.colors.length ? index + 1 : state.colors.length,
+      }
+    case 'PREVIOUS_COLOR':
+      return {
+        ...state,
+        index: state.index > 0 ? index - 1 : 0,
+      }
+    default:
+      return state
+  }
 }
 
 const store = Redux.createStore(colorReducer);
